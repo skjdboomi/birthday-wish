@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        /* CSS for Styling */
+        body {
+            background-color: #fce4ec;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        h1 {
+            color: #d81b60;
+            font-size: 3rem;
+            animation: bounce 2s infinite;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            display: inline-block;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        button {
+            background-color: #d81b60;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        /* A simple animation */
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <h1>Happy Birthday, [Name]! 🎂</h1>
+            <p>Wishing you a day filled with love and laughter.</p>
+            <button onclick="celebrate()">Click for a Surprise!</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script>
+        function celebrate() {
+            // This triggers a confetti blast
+            confetti({
+                particleCount: 150,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        }
+    </script>
+</body>
+</html>
